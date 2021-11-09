@@ -8,4 +8,4 @@
     4. 앞으로 개발 계획
 - 시스템 아키텍쳐
   - Front-End : Java Swing
-  - Back-End : RxJava
+  - Back-End : Spring Boot
