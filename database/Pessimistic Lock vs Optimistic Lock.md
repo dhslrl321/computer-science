@@ -8,3 +8,7 @@
 
 - system 은 낙관적이게 충돌이 잘 발생하지 않을거라고 생각하기에 row 락을 걸지 않고 version 으로 컨트롤함
 - update query 에 where 조건 추가
+  - T1 `select * from stock` (v1)
+  - T2 `select * from stock` (v1)
+  - T1 `update ... where version = v1` => v2
+  - T2 `update ... where version = v1` => 충돌
