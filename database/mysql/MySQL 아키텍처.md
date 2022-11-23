@@ -1,4 +1,4 @@
-# 아키텍처
+# MySQL 아키텍처
 
 - MySQL 클라이언트
 - Connection Pool layer
