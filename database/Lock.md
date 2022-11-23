@@ -1,0 +1,24 @@
+### 목차
+
+- lock 이란
+  - tx 의 순차성을 보장하기 위한 방법
+    - tx 는 최소한의 작업 처리 단위
+- lock 종류
+  - Exclusive Lock
+    - 데이터를 변경하기 위한 lock
+    - tx 가 commit 될 때 까지 유지
+    - `insert`, `update`, `select ~ for update` 등등
+  - Shared Lock
+    - 읽기 lock
+    - lock 을 걸어두면 읽기 작업은 선점하지 않고 누구나 접근 가능
+    - update, delete 와 같은 exclusive lock 불가
+    - tx 가 commit 될 때 까지 유지
+    - `select ~ from for share`
+  - 잠금에 대한 모니터링
+    - `select * from information_schema.INNODB_TRX` 로 lock 에 대한 상태 `trx_state` 등 이런거 확인할 수 이씀
+- blocking
+  - `베타-베타` 혹은 `베타-공유` 간의 경합으로 인해서 tx 가 진행하지 못하고 멈춰진 상태
+  - block 상태를 벗어나기 위해서는 이전의 tx 가 commit 되어야함
+- deadlock
+  - 두 트랜잭션이 각각 lock 을 설정하고 서로의 lock 에 접근하여 값을 얻어올 때 양쪽 tx 가 영원히 처리되지 않는 상태
+  - mysql 에서 deadlock 재현하면 `deadlock found,` 이 뜨면서
