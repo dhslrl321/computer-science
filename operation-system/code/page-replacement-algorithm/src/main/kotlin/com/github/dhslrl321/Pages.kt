@@ -5,7 +5,7 @@ class Pages(
   val pageMap: MutableMap<String, Page>,
 ) {
 
-  fun getSize(): Int {
+  fun size(): Int {
     return pageMap.size
   }
 

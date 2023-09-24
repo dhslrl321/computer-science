@@ -1,5 +1,6 @@
 package com.github.dhslrl321
 
+import com.github.dhslrl321.strategy.LeastRecentlyUsedEvictionStrategy
 import io.kotest.matchers.shouldBe
 import org.junit.jupiter.api.BeforeEach
 import org.junit.jupiter.api.Test

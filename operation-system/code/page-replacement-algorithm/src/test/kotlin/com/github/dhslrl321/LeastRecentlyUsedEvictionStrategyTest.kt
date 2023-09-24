@@ -1,5 +1,6 @@
 package com.github.dhslrl321
 
+import com.github.dhslrl321.strategy.LeastRecentlyUsedEvictionStrategy
 import io.kotest.matchers.shouldBe
 import io.kotest.matchers.shouldNotBe
 import org.junit.jupiter.api.Test
@@ -28,7 +29,7 @@ class LeastRecentlyUsedEvictionStrategyTest {
 
     actual shouldNotBe null
     actual!!.data shouldBe "D"
-    pages.getSize() shouldBe 3
+    pages.size() shouldBe 3
   }
 
   companion object {

@@ -1,5 +1,6 @@
 package com.github.dhslrl321
 
+import com.github.dhslrl321.strategy.EvictionStrategy
 import java.time.Instant
 
 data class Cache(
