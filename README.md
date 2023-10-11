@@ -6,6 +6,6 @@
 - 네트워크
 - 데이터베이스
 
-# Network
+# 키워드
 
-- [3-way-handshake](#)
+[페이지 교체 알고리즘](https://github.com/dhslrl321/computer-science/tree/master/operation-system/code/page-replacement-algorithm)
